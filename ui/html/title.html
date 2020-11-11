@@ -1,0 +1,14 @@
+
+{{block "head" . }}
+{{end}}
+
+{{block "header" .}}
+   <div> <h1 id = "header"> Default title header </h1> </div>
+{{end}}
+
+<h1> Title of nested templed : {{ . }}</h1>
+
+{{block "footer" .}}
+ <div>   <h1 id= "footer"> Default footer title </h1> </div>
+{{end}}
+

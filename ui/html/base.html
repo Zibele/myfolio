@@ -1,0 +1,34 @@
+
+{{ define "head"}}
+
+<head> 
+<title> {{.Name}} | {{.Profession}} Portfolio </title>
+<link type="text/css" rel="stylesheet" href="/static/style.css">
+<link type="text/css" rel="stylesheet" href ="/static/mobile.css">
+</head>
+
+{{end}}
+
+{{ define "header"}}
+
+<header id="header"> 
+
+<a class = "headerItem"> <img src="/static/img/FinalBannerLogo.png"/> </a> 
+
+<nav class="headerItem"> 
+    
+    <a href = "Who"> Who Am I? </a>
+    <a href = "Is"> Portfolio </a>
+    <a href = "Yo"> Contact   </a>
+    
+</nav>
+
+</header>
+
+{{end}}
+
+{{ define "footer"}}
+
+    <footer> <div class = "footDiv"> <p> Copyright&copy reserved 2020</p> </div>  </footer>
+
+{{end}}

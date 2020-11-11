@@ -1,0 +1,38 @@
+
+{{block "head" .}}
+{{end}}
+
+{{block "header" .}}
+ <p> Default header
+{{end}}
+
+<p>Size is greater than {{gt .Size 0}}</p>
+{{ if gt .Size 0 }} 
+<p> We are greater than</p>
+<div id="stock"> 
+
+{{ range .Items}}
+
+<div>
+<p> We are in here {{.Name}} </p>
+<img src ="static/img/{{.Name}}" alt = "{{.Name}}" /> <br>
+<h2>{{.Name}}</h2>
+
+</div>
+
+{{end}}
+
+</div>
+{{ else }}
+
+<p> no images in stock </p>
+
+{{end}}
+
+{{ with wD }}
+<p> Input path {{.}} </p>
+{{end}}
+
+{{block "footer" .}}
+<p> Footer </p>
+{{end}}
