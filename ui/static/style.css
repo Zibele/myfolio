@@ -28,7 +28,8 @@ nav a{
     color: white;
 }
 .footDiv{
-    display:flex;
+    display: flex;
+    width: 100%;
     justify-content: center;
 }
 
