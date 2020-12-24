@@ -2,26 +2,30 @@
 {{ define "head"}}
 
 <head> 
-<title> {{.Name}} | {{.Profession}} Portfolio </title>
-<link type="text/css" rel="stylesheet" href="/static/style.css">
-<link type="text/css" rel="stylesheet" href ="/static/mobile.css">
+    
+    <meta charset = "utf-8"/>
+    <meta name="viewport" cotent ="width=device-width, initial-scale=1">
+    <title> {{.Name}} | {{.Profession}} Portfolio </title>
+    <link rel="stylesheet" href="/static/dist/tailwind.css"/>
+
 </head>
 
-{{end}}
+{{ end }}
 
-{{ define "header"}}
 
-<header id="header"> 
+{{ define "body"}}
 
-<a class = "headerItem"> <img src="/static/img/FinalBannerLogo.png"/> </a> 
-
-<nav class="headerItem"> 
+<header class="flex md:flex-1 md:items-center md:justify-between p-4 pb-0 md:pb-4 shadow-lg "> 
     
-    <a href = "Who"> Who Am I? </a>
-    <a href = "Is"> Portfolio </a>
-    <a href = "Yo"> Contact   </a>
-    
-</nav>
+    <a class = "flex no-underline"> <img src="/static/img/FinalBannerLogo.png"/> </a> 
+
+    <nav class="flex"> 
+        
+        <a class = "no-underline" href = "#"> Who Am I? </a>
+        <a class = "no-underline" href = "#"> Portfolio </a>
+        <a class = "no-underline" href = "#"> Contact   </a>
+        
+    </nav>
 
 </header>
 

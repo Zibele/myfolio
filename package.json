@@ -1,0 +1,30 @@
+{
+  "name": "myfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "postcss": "^8.2.1",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss ./ui/static/style.css -o ./ui/static/dist/tailwind.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zibele/myfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zibele/myfolio/issues"
+  },
+  "homepage": "https://github.com/Zibele/myfolio#readme"
+}

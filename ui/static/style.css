@@ -1,41 +1,9 @@
-@font-face{
-    font-family : "Suwannaphum";
-    src : url("http://wickedlysmart.com/hfhtmlcss/chapter8/journal/EmblemaOne-Regular.woff"),
-    url("http://wickedlysmart.com/hfhtmlcss/chapter8/journal/EmblemaOne-Regular.ttf");
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
-header,footer {
-    display : flex;
-    flex-flow: row nowrap;
-    background-color: #0e2426;
-}
 
 
-.headerItem{
-    display : flex;
-    margin : 10px 10px;
-    width: 50%;
-}
-
-header nav {
-    justify-content: flex-end;
-}
-
-nav a{
-    padding: 8px;
-    text-decoration: none;
-    color: white;
-}
-.footDiv{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-footer div p {
-    color:white;
-    padding-left: 10px;
-}
 
 

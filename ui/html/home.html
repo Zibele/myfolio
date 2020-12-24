@@ -1,22 +1,19 @@
 
-{{ block "head" .}}
-{{end}}
 
 
-<body>
-   
-    {{ block "header" .}}
-        <h1 class = "header"> Default header </h1>
-    {{end}}
-    
-    <a href="/Items"> Click to view images </a>
 
-    <blockquote class = "quotes"> Sometimes I do not know why,
-         but I cry sometimes, when air rushes, and the pyramids crash </blockquote>
+<!DOCTYPE html>
 
-    {{ block "footer" .}}
-    <h1 id = "footer"> Footer </h1>
-    {{end}}
-    
+<html>
 
-</body>
+    <head> {{ template "head"}} <head>
+    <body> {{ template "body"}} <body>
+    <footer>{{ template "footer"}} <footer>
+
+</html>
+
+
+
+
+
+
