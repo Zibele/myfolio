@@ -4,35 +4,59 @@
 <head> 
     
     <meta charset = "utf-8"/>
-    <meta name="viewport" cotent ="width=device-width, initial-scale=1">
+    <meta name="viewport" cotent ="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title> {{.Name}} | {{.Profession}} Portfolio </title>
     <link rel="stylesheet" href="/static/dist/tailwind.css"/>
+
+    <style>
+        #menu-toggle:checked + #menu {
+          display: block;
+        }
+    </style>
 
 </head>
 
 {{ end }}
 
 
-{{ define "body"}}
+{{ define "content"}}
 
-<header class="flex md:flex-1 md:items-center md:justify-between p-4 pb-0 md:pb-4 shadow-lg "> 
-    
-    <a class = "flex no-underline"> <img src="/static/img/FinalBannerLogo.png"/> </a> 
 
-    <nav class="flex"> 
-        
-        <a class = "no-underline" href = "#"> Who Am I? </a>
-        <a class = "no-underline" href = "#"> Portfolio </a>
-        <a class = "no-underline" href = "#"> Contact   </a>
-        
+<header class="lg:px-16 px-6 bg-dark flex flex-wrap items-center lg:py-0 py-2">
+    <div class="flex-1 flex justify-between items-center">
+      <a href="#">
+          <svg width="45" height="38" viewBox="0 0 45 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="18" r="15.9822" stroke="#21E6C1" stroke-width="1.96431"/>
+              <path d="M31.402 13.1453C31.7103 17.3045 31.5685 20.5011 30.9765 22.7351C30.4222 24.9575 29.2238 26.3533 27.3813 26.9223C26.4037 27.2242 24.4457 27.2592 21.5074 27.0271C18.5691 26.795 16.8556 26.7544 16.3668 26.9054C15.9156 27.0447 15.6526 27.1829 15.578 27.3199C15.2734 29.2753 14.7263 30.3749 13.9367 30.6188C13.1846 30.851 12.5561 30.6653 12.0512 30.0615C11.5463 29.4577 11.3679 28.905 11.5162 28.4034C11.6768 27.86 11.7942 27.4629 11.8683 27.2121C11.98 26.9497 12.1541 26.592 12.3904 26.1392C12.6644 25.6747 13.0001 25.0013 13.3976 24.1188C14.653 21.4899 15.9427 18.1667 17.2668 14.1491L17.9912 12.0451L16.7495 12.2577C13.8021 12.7501 11.896 13.1299 11.0312 13.397C9.03829 14.0125 7.84364 14.8753 7.44721 15.9853C7.41014 16.1107 7.40853 17.0988 7.44237 18.9497C7.45096 20.7703 7.43646 21.6865 7.39886 21.6981C7.24845 21.7445 6.90816 21.4508 6.37798 20.8168C5.8478 20.1829 5.55639 19.6081 5.50375 19.0926C5.45111 18.577 5.29641 17.7132 5.03965 16.501C4.82049 15.2771 4.68485 14.4644 4.63275 14.0626C4.593 13.6191 4.62174 13.0594 4.71897 12.3836C4.81619 11.7078 5.1025 11.2016 5.57789 10.8648C6.02803 10.4979 6.59152 10.2099 7.26834 10.0009C7.94516 9.79182 9.07374 9.55723 10.6541 9.29707L11.4066 9.1786C14.9063 8.66755 17.0509 8.29009 17.8405 8.04622C19.1189 7.65138 19.893 6.76656 20.1627 5.39177C20.2115 5.11077 20.424 4.91221 20.8 4.79608C21.2136 4.66834 21.9036 4.58819 22.87 4.55564C21.7548 7.63501 19.5831 14.2315 16.3547 24.3451C19.0185 24.9278 21.422 24.8883 23.5653 24.2263C23.6405 24.2031 23.7157 24.1799 23.7909 24.1566C25.483 23.6341 26.8533 22.755 27.9018 21.5195C28.9504 20.284 29.5587 18.8616 29.7268 17.2523C29.7864 16.5881 29.7615 15.2853 29.6519 13.3439C29.5171 11.3723 29.4873 10.3749 29.5625 10.3517C29.7505 10.2936 30.0843 10.5514 30.564 11.125C31.0437 11.6986 31.323 12.372 31.402 13.1453Z" fill="#21E6C1"/>
+              </svg>
+                               
+    </a>
+  </div>
+
+   <label for="menu-toggle" class="pointer-cursor lg:hidden block"><svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
+  <input class="hidden" type="checkbox" id="menu-toggle" />
+
+  <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+    <nav>
+      <ul class="lg:flex items-center justify-between text-base text-white pt-4 lg:pt-0">
+        <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-turq " href="#">Home</a></li>
+        <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-turq " href="#">Portfolio</a></li>
+        <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-turq " href="#">About</a></li>
+        <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-turq lg:mb-0 mb-2" href="#">Contact</a></li>
+      </ul>
     </nav>
+    
+  </div>
 
-</header>
+  </header>
+    
+        
+
 
 {{end}}
 
 {{ define "footer"}}
 
-    <footer> <div class = "footDiv"> <p> Copyright&copy reserved 2020</p> </div>  </footer>
+   <div class="container mx-auto"> <footer> Copyright&copy reserved 2020 </footer> </div>
 
 {{end}}
