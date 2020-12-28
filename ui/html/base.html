@@ -21,7 +21,7 @@
 
 {{ define "content"}}
 
-
+<div> 
 <header class="lg:px-16 px-6 bg-dark flex flex-wrap items-center lg:py-0 py-2">
     <div class="flex-1 flex justify-between items-center">
       <a href="#">
@@ -50,16 +50,23 @@
 
   </header>
 
-  <div class = "flex flex-col p-8 lg:flex-row lg:p-15 items-center justify-evenly">
+  <div class = "flex flex-col p-8 lg:flex-row lg:p-15 lg:pt-20 items-center justify-evenly">
 
-    <div class = "flex flex-col text-white justify-evenly">
+    <div class = "flex flex-col text-white text-center justify-evenly lg:text-left">
 
-        <h1 class="lg:text-3xl pb-2" >
-          Hi, I’m  <bold>Zibele.<br>  A Software Developer.</bold>
+        <h1 class="lg:text-3xl pb-4 font-bold" >
+          Hi, I’m <b class="font-extrabold">Zibele</b>.<br> A<b class="font-extrabold"> Software Developer. </b>
         </h1>
-        <p class="lg:text-xl pb-2">
+        <p class="lg:text-xl font-bold pb-8">
           Transforming idea’s into quality software.
         </p>
+
+        <div class="flex text-white items-center justify-center pb-4 lg:justify-between lg:w-1/2">
+
+          <button class="bg-turq border-2 border-turq pb-4 w-32 h-8 rounded-lg"> <a href="#" class="p-4" > Contact </a> </button>
+          <button class="border-2 border-turq pb-4 w-32 h-8 ml-6 rounded-lg"> <a href="#" class="p-4"> Portfolio </a> </button>
+      
+        </div> 
 
     </div>
 
@@ -71,14 +78,14 @@
         <path d="M236.5 129.5C236.5 193.289 185.498 244.975 119.5 244.975C53.502 244.975 0 193.264 0 129.475C0 65.6863 51.002 0 117 0C182.998 0 236.5 65.7111 236.5 129.5Z" fill="#C4C4C4"/>
         </mask>
         <g mask="url(#mask0)">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M118 0C87.0721 0 62 25.0721 62 56V62.1659C56.3246 63.1181 52 68.054 52 74V88C52 94.0521 56.4803 99.058 62.3051 99.881C64.3722 119.687 76.7626 136.422 94 144.611V163H90C50.2355 163 18 195.236 18 235V244H218V235C218 195.236 185.764 163 146 163H142V144.611C159.237 136.422 171.628 119.687 173.695 99.881C179.52 99.058 184 94.0521 184 88V74C184 68.054 179.675 63.1181 174 62.1659V56C174 25.0721 148.928 0 118 0Z" fill="#D0C6AC"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M118 0C87.0721 0 62 25.0721 62 56V62.1659C56.3246 63.1181 52 68.054 52 74V88C52 94.0521 56.4803 99.058 62.3051 99.881C64.3722 119.687 76.7626 136.422 94 144.611V163H90C50.2355 163 18 195.236 18 235V244H218V235C218 195.236 185.764 163 146 163H142V144.611C159.237 136.422 171.628 119.687 173.695 99.881C179.52 99.058 184 94.0521 184 88V74C184 68.054 179.675 63.1181 174 62.1659V56C174 25.0721 148.928 0 118 0Z" fill="#303A52"/>
         <mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="18" y="0" width="200" height="244">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M118 0C87.0721 0 62 25.0721 62 56V62.1659C56.3246 63.1181 52 68.054 52 74V88C52 94.0521 56.4803 99.058 62.3051 99.881C64.3722 119.687 76.7626 136.422 94 144.611V163H90C50.2355 163 18 195.236 18 235V244H218V235C218 195.236 185.764 163 146 163H142V144.611C159.237 136.422 171.628 119.687 173.695 99.881C179.52 99.058 184 94.0521 184 88V74C184 68.054 179.675 63.1181 174 62.1659V56C174 25.0721 148.928 0 118 0Z" fill="white"/>
         </mask>
         <g mask="url(#mask1)">
         <path d="M250 0H-14V244H250V0Z" fill="#AE5D29"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M62 94V102C62 132.928 87.0721 158 118 158C148.928 158 174 132.928 174 102V94C174 124.928 148.928 150 118 150C87.0721 150 62 124.928 62 94Z" fill="black" fill-opacity="0.1"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M118.5 185.828C137.002 185.828 152 176.211 152 164.348C152 163.995 151.987 163.644 151.96 163.295C188.936 166.325 218 197.294 218 235.052V244H18V235.052C18 196.953 47.592 165.765 85.0454 163.22C85.0153 163.593 85 163.969 85 164.348C85 176.211 99.9985 185.828 118.5 185.828Z" fill="#E6E6E6"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M118.5 185.828C137.002 185.828 152 176.211 152 164.348C152 163.995 151.987 163.644 151.96 163.295C188.936 166.325 218 197.294 218 235.052V244H18V235.052C18 196.953 47.592 165.765 85.0454 163.22C85.0153 163.593 85 163.969 85 164.348C85 176.211 99.9985 185.828 118.5 185.828Z" fill="#303A52"/>
         </g>
         <mask id="mask2" mask-type="alpha" maskUnits="userSpaceOnUse" x="18" y="163" width="200" height="81">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M118.5 185.828C137.002 185.828 152 176.211 152 164.348C152 163.995 151.987 163.644 151.96 163.295C188.936 166.325 218 197.294 218 235.052V244H18V235.052C18 196.953 47.592 165.765 85.0454 163.22C85.0153 163.593 85 163.969 85 164.348C85 176.211 99.9985 185.828 118.5 185.828Z" fill="white"/>
@@ -107,17 +114,22 @@
         </g>
         </svg>
         
+        
     </div>
 
   </div>
 
-  <div class="flex px:6 lg:px-16 w-1/2 items-center justify-around">
+  <div class="flex flex-col items-center justify-end w-full">
 
-    <button class="bg-turq"> Contact </button>
-    <button class="border-2 border-turq"> Portfolio </button>
+    <p class="font-semibold text-white"> scroll </p>
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18.0168 30.2445L11.7048 23.572L13.748 21.6392L18.0113 26.1461L22.2492 21.642L24.2976 23.5692L18.0168 30.2445ZM29.6719 27.5625V8.4375C29.6719 3.78506 25.8868 0 21.2344 0H14.7656C10.1132 0 6.32812 3.78506 6.32812 8.4375V27.5625C6.32812 32.2149 10.1132 36 14.7656 36H21.2344C25.8868 36 29.6719 32.2149 29.6719 27.5625ZM21.2344 2.8125C24.3361 2.8125 26.8594 5.33578 26.8594 8.4375V27.5625C26.8594 30.6642 24.3361 33.1875 21.2344 33.1875H14.7656C11.6639 33.1875 9.14062 30.6642 9.14062 27.5625V8.4375C9.14062 5.33578 11.6639 2.8125 14.7656 2.8125H21.2344ZM18 5.69531C17.2233 5.69531 16.5938 6.32483 16.5938 7.10156C16.5938 7.8783 17.2233 8.50781 18 8.50781C18.7767 8.50781 19.4062 7.8783 19.4062 7.10156C19.4062 6.32483 18.7767 5.69531 18 5.69531ZM18 11.3203C17.2233 11.3203 16.5938 11.9498 16.5938 12.7266C16.5938 13.5033 17.2233 14.1328 18 14.1328C18.7767 14.1328 19.4062 13.5033 19.4062 12.7266C19.4062 11.9498 18.7767 11.3203 18 11.3203ZM18 16.9453C17.2233 16.9453 16.5938 17.5748 16.5938 18.3516C16.5938 19.1283 17.2233 19.7578 18 19.7578C18.7767 19.7578 19.4062 19.1283 19.4062 18.3516C19.4062 17.5748 18.7767 16.9453 18 16.9453Z" fill="#21E6C1"/>
+      </svg>
 
-  </div> 
-  
+  </div>
+
+</div>
+
 
 {{end}}
 
