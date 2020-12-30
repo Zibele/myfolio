@@ -14,6 +14,7 @@ module.exports = {
       colors: {
         dark: "#262E33",
         turq: "#21E6C1",
+        darklight: "#303A52",
       },
     },
   },
