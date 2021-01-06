@@ -7,8 +7,8 @@ def index_page(request):
 
     profile = Profile.objects.get(name='Zibele')
     projects = Project.objects.filter(profile_id=profile)
-    techStack = TechStack.objects.all()
+    tech_stacks = TechStack.objects.all()
     skills = ProfileSkill.objects.filter(profile_id=profile)
 
-    return render(request,'myfolio/my_folio_app/templates/myfolio/my_folio_app/index.html',
-    {'profile' : Profile, })
+    return render(request,'templates/my_folio_app/index.html',{'profile' : Profile,
+    'projects': projects,'techStacks': tech_stacks,'skills':skills})
