@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "postcss ./ui/static/style.css -o ./ui/static/dist/tailwind.css"
+    "build": "postcss ./myfolio/my_folio_app/static/style.css -o ./myfolio/my_folio_app/static/dist/tailwind.css"
   },
   "repository": {
     "type": "git",

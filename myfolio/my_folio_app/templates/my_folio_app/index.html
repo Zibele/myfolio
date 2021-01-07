@@ -1,6 +1,12 @@
-{% extends "templates/base.html" %}
+{% extends "base.html" %}
 
-{% block header} 
+{% block title %}
+
+    profile.name | profile.job_title
+    
+{% endblock %}
+
+{% block header %} 
 
     <section>  
         <header class="lg:px-16 px-6 bg-dark flex flex-wrap items-center pt-6 ">

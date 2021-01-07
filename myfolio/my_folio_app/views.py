@@ -10,5 +10,5 @@ def index_page(request):
     tech_stacks = TechStack.objects.all()
     skills = ProfileSkill.objects.filter(profile_id=profile)
 
-    return render(request,'templates/my_folio_app/index.html',{'profile' : Profile,
+    return render(request,'my_folio_app/index.html',{'profile' : profile,
     'projects': projects,'techStacks': tech_stacks,'skills':skills})

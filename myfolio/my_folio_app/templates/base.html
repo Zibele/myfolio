@@ -1,4 +1,4 @@
-{ % load static %}
+{% load static %}
 
 <!DOCTYPE html>
 
@@ -24,8 +24,9 @@
         </div>
 
         <div class="footer">
-        <!---- {{ template "footer"}}  -->
+             {% block footer %} {% endblock %}  
         </div>
     </body>
 
 </html>
+
