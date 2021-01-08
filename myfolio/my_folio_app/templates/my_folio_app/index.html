@@ -2,7 +2,7 @@
 
 {% block title %}
 
-    profile.name | profile.job_title
+    {{profile.name}} | {{profile.job_title}}
     
 {% endblock %}
 
@@ -46,11 +46,11 @@
         <div class = "flex flex-col text-gray-50 text-center justify-evenly lg:text-left">
 
             <h1 class="text-6xl pb-10 lg:pb-6 font-bold" >
-            Hi, I’m <b class="font-extrabold">Zibele</b>.<br> A<b class="font-extrabold"> Software Developer. </b>
+            Hi, I’m <b class="font-extrabold">{{profile.name}}</b>.<br> A<b class="font-extrabold"> {{profile.job_title}}. </b>
             </h1>
             
             <p class="text-4xl lg:text-2xl font-semibold pb-14 lg:pb-10">
-            Transforming idea’s into quality software.
+                Transforming idea’s into quality software.
             </p>
 
         <div class="flex text-gray-50 text-sm items-center justify-center lg:pb-6 lg:justify-between lg:w-1/2">
@@ -138,15 +138,15 @@
             
         <div class="flex items-center justify-center py-2 w-full">
                 
-            <button class="w-36 h-12 bg-darklight border-b-8 border-transparent hover:border-turq">
+            <button class="w-36 h-12 bg-darklight border-b-8 border-transparent hover:border-turq focus:border-turq focus:ring-4 focus:outline-darklight">
                 Languages
             </button>
 
-            <button class="w-36 h-12 bg-darklight mx-2 border-b-8 border-transparent hover:border-turq">
+            <button class="w-36 h-12 bg-darklight mx-2 border-b-8 border-transparent hover:border-turq focus:border-turq focus:ring-0">
                 Frameworks
             </button>
 
-            <button class="w-36 h-12 bg-darklight border-b-8 border-transparent hover:border-turq">
+            <button class="w-36 h-12 bg-darklight border-b-8 border-transparent hover:border-turq focus:border-turq focus:ring-0">
                 Tools
             </button>
                 
