@@ -15,7 +15,7 @@ class Profile(models.Model):
 
 class Project(models.Model):
 
-    profile_id = models.ForeignKey(Profile,on_delete=models.CASCADE)
+    profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
     project_title = models.CharField(max_length=30)
     description = models.TextField()
     
@@ -39,7 +39,7 @@ class Category(models.Model):
 
 class Skill(models.Model):
 
-    category_id=models.ForeignKey(Category, on_delete=models.CASCADE)
+    category=models.ForeignKey(Category, on_delete=models.CASCADE)
     skill_name= models.CharField(max_length=30)
     
     def __str__(self):
@@ -50,8 +50,8 @@ class Skill(models.Model):
 
 class ProfileSkill(models.Model):
 
-    profile_id = models.ForeignKey(Profile,on_delete = models.CASCADE)
-    skill_id=models.ForeignKey(Skill,on_delete= models.CASCADE)
+    profile= models.ForeignKey(Profile,on_delete = models.CASCADE)
+    skill=models.ForeignKey(Skill,on_delete= models.CASCADE)
 
     class meta:
         db_table='"ProfileSkills"'
@@ -63,12 +63,3 @@ class TechStack(models.Model):
 
     class meta:
         db_table='"TechStack"'
-
-
-
-
-
-
-
-
-

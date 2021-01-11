@@ -3,6 +3,23 @@
 @tailwind utilities;
 
 
+
+@layer components {
+
+    .skillbox-flex {
+        @apply flex flex-wrap flex-col lg:flex-row items-center justify-evenly p-4;
+    }
+
+    .skillbox-hidden {
+        @apply hidden;
+    }
+
+}
+
+
+
+
+
 @font-face{
     font-family:'Poppins';
     font-weight:100;
