@@ -582,10 +582,9 @@ video {
 
 .skillbox-flex {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   padding: 1rem;
 }
 

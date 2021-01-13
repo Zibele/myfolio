@@ -152,15 +152,15 @@
                 
         </div>
 
-        <div class="bg-darklight  lg:w-2/3  w-1/3 h-96 pb-10">
+        <div id = "skills" class="lg:pl-10 bg-darklight  lg:w-2/3  w-1/3 h-96 pb-10">
 
 
-            <div id="languages" class="skillbox-flex"> 
+            <div id="Languages" class="skillbox-flex justify-start"> 
 
                 {% for profile_skill in profile_skills %}
 
                     {% if profile_skill.skill.category.category_name == "Language" %}
-                        <div class="bg-dark w-44 h-20 py-6"> {{ profile_skill.skill.skill_name}} </div>
+                        <div class="bg-dark w-44 h-20 py-6 m-2"> {{ profile_skill.skill.skill_name}} </div>
                     {% endif %}
 
                 {% endfor %}
@@ -169,12 +169,12 @@
 
 
 
-            <div id="frameworks" class="skillbox-hidden"> 
+            <div id="Frameworks" class="skillbox-flex hidden"> 
 
                 {% for profile_skill in profile_skills %}
 
                     {% if profile_skill.skill.category.category_name == "Framework" %}
-                        <div class="bg-dark w-44 h-20 py-6"> {{ profile_skill.skill.skill_name}} </div>
+                        <div class="bg-dark w-44 h-20 m-2 py-6"> {{ profile_skill.skill.skill_name}} </div>
                     {% endif %}
 
                 {% endfor %}
@@ -182,12 +182,12 @@
             </div>
 
 
-            <div id="tools" class="skillbox-hidden"> 
+            <div id="Tools" class="skillbox-flex hidden"> 
 
                 {% for profile_skill in profile_skills %}
 
                     {% if profile_skill.skill.category.category_name == "Tool" %}
-                        <div class="bg-dark w-44 h-20 py-6"> {{ profile_skill.skill.skill_name}} </div>
+                        <div class="bg-dark w-44 h-20 m-2 py-6"> {{ profile_skill.skill.skill_name}} </div>
                     {% endif %}
 
                 {% endfor %}

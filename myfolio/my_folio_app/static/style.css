@@ -7,7 +7,7 @@
 @layer components {
 
     .skillbox-flex {
-        @apply flex flex-wrap flex-col lg:flex-row items-center justify-evenly p-4;
+        @apply flex flex-wrap lg:flex-row items-center p-4 justify-start;
     }
 
     .skillbox-hidden {
@@ -15,9 +15,6 @@
     }
 
 }
-
-
-
 
 
 @font-face{
