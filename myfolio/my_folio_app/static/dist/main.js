@@ -5,13 +5,23 @@ console.log(skillBtnGroup.length);
 
 skillBtnGroup.forEach( (btn) => {
 
-    btn.addEventListener( "click", () => {
+    btn.addEventListener( "click", () => { 
             toggleSkills(btn.value);
         });
 
     });
 
+function toggleCategoryBtn(categoryBtn,categories){
 
+    categories.forEach( (btn) => {
+
+        btn === categoryBtn ? btn.className = "" : btn.className="";
+
+        
+
+    })
+
+}
 function toggleSkills(category){
     
     let categories = document.querySelectorAll('#skills > div')

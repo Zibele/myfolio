@@ -581,6 +581,8 @@ video {
 }
 
 .skillbox-flex {
+  --tw-bg-opacity: 1;
+  background-color: rgba(48, 58, 82, var(--tw-bg-opacity));
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -596,6 +598,152 @@ video {
 
 .skillbox-hidden {
   display: none;
+}
+
+.category-toggled{
+  --tw-border-opacity: 1;
+  border-color: rgba(33, 230, 193, var(--tw-border-opacity));
+  border-width: 2px;
+  font-weight: 700;
+  height: 3rem;
+}
+
+.category-toggled:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.category-toggled {
+  --tw-text-opacity: 1;
+  color: rgba(33, 230, 193, var(--tw-text-opacity));
+  text-transform: uppercase;
+  width: 9rem;
+}
+
+.category-untoggled{
+  --tw-border-opacity: 1;
+  border-color: rgba(243, 244, 246, var(--tw-border-opacity));
+}
+
+.category-untoggled:hover {
+  --tw-border-opacity: 1;
+  border-color: rgba(33, 230, 193, var(--tw-border-opacity));
+}
+
+.category-untoggled:focus {
+  --tw-border-opacity: 1;
+  border-color: rgba(33, 230, 193, var(--tw-border-opacity));
+}
+
+.category-untoggled {
+  border-width: 2px;
+  font-weight: 700;
+  height: 3rem;
+}
+
+.category-untoggled:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.category-untoggled {
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+
+.category-untoggled:hover {
+  --tw-text-opacity: 1;
+  color: rgba(33, 230, 193, var(--tw-text-opacity));
+}
+
+.category-untoggled:focus {
+  --tw-text-opacity: 1;
+  color: rgba(33, 230, 193, var(--tw-text-opacity));
+}
+
+.category-untoggled {
+  text-transform: uppercase;
+  width: 9rem;
+}
+
+.center-category-toggled{
+  --tw-border-opacity: 1;
+  border-color: rgba(33, 230, 193, var(--tw-border-opacity));
+  border-width: 2px;
+  font-weight: 700;
+  height: 3rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.center-category-toggled:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.center-category-toggled:hover {
+  --tw-text-opacity: 1;
+  color: rgba(33, 230, 193, var(--tw-text-opacity));
+}
+
+.center-category-toggled {
+  text-transform: uppercase;
+  width: 9rem;
+}
+
+.center-category-untoggled{
+  --tw-border-opacity: 1;
+  border-color: rgba(243, 244, 246, var(--tw-border-opacity));
+}
+
+.center-category-untoggled:hover {
+  --tw-border-opacity: 1;
+  border-color: rgba(33, 230, 193, var(--tw-border-opacity));
+}
+
+.center-category-untoggled:focus {
+  --tw-border-opacity: 1;
+  border-color: rgba(33, 230, 193, var(--tw-border-opacity));
+}
+
+.center-category-untoggled {
+  border-width: 2px;
+  font-weight: 700;
+  height: 3rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.center-category-untoggled:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.center-category-untoggled {
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+
+.center-category-untoggled:hover {
+  --tw-text-opacity: 1;
+  color: rgba(33, 230, 193, var(--tw-text-opacity));
+}
+
+.center-category-untoggled {
+  text-transform: uppercase;
+  width: 9rem;
 }
 
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
