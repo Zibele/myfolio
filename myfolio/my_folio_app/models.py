@@ -41,6 +41,9 @@ class Skill(models.Model):
 
     category=models.ForeignKey(Category, on_delete=models.CASCADE)
     skill_name= models.CharField(max_length=30)
+    skill_svg=  models.TextField(null = True)
+    display_svg= models.BooleanField(default = True)
+    display_name = models.BooleanField(default = True)
     
     def __str__(self):
         return self.skill_name

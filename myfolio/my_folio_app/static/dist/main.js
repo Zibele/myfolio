@@ -5,7 +5,8 @@ console.log(skillBtnGroup.length);
 
 skillBtnGroup.forEach( (btn) => {
 
-    btn.addEventListener( "click", () => { 
+    btn.addEventListener( "click", () => {
+            toggleCategoryBtn(btn,skillBtnGroup) 
             toggleSkills(btn.value);
         });
 
@@ -15,10 +16,7 @@ function toggleCategoryBtn(categoryBtn,categories){
 
     categories.forEach( (btn) => {
 
-        btn === categoryBtn ? btn.className = "" : btn.className="";
-
-        
-
+        btn === categoryBtn ? btn.className = "category-toggled" : btn.className="category-untoggled";
     })
 
 }

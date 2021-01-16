@@ -14,22 +14,17 @@
         @apply hidden;
     }
 
+    .skill-tab{
+        @apply flex flex-wrap items-center justify-center w-64 h-32 bg-dark min-w-min py-6 m-2;
+    }
+
     .category-toggled{
-        @apply w-36 h-12  uppercase font-bold text-turq border-2 border-turq focus:ring focus:outline-none;
+        @apply w-36 h-12  uppercase font-bold mx-2 text-turq border-2 border-turq focus:ring focus:outline-none;
     }
 
     .category-untoggled{
-        @apply w-36 h-12  uppercase font-bold border-gray-100 text-gray-100 focus:text-turq hover:text-turq border-2 hover:border-turq focus:ring focus:outline-none focus:border-turq;
+        @apply w-36 h-12  uppercase font-bold mx-2 border-gray-100 text-gray-100 focus:text-turq hover:text-turq border-2 hover:border-turq focus:ring focus:outline-none focus:border-turq;
     }
-
-    .center-category-toggled{
-        @apply w-36 h-12 uppercase font-bold hover:text-turq border-2 mx-2 border-turq focus:ring focus:outline-none;
-    }
-
-    .center-category-untoggled{
-        @apply w-36 h-12 uppercase font-bold border-gray-100 text-gray-100 hover:text-turq border-2 mx-2 hover:border-turq focus:border-turq focus:ring focus:outline-none;
-    }
-
 }
 
 
