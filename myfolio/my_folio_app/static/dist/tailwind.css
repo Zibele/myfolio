@@ -581,8 +581,6 @@ video {
 }
 
 .skillbox-flex {
-  --tw-bg-opacity: 1;
-  background-color: rgba(48, 58, 82, var(--tw-bg-opacity));
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -602,7 +600,7 @@ video {
 
 .skill-tab{
   --tw-bg-opacity: 1;
-  background-color: rgba(38, 46, 51, var(--tw-bg-opacity));
+  background-color: rgba(48, 58, 82, var(--tw-bg-opacity));
   display: flex;
   flex-wrap: wrap;
   align-items: center;

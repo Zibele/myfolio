@@ -7,7 +7,7 @@
 @layer components {
 
     .skillbox-flex {
-        @apply flex flex-wrap lg:flex-row items-center p-4 justify-start bg-darklight;
+        @apply flex flex-wrap lg:flex-row items-center p-4 justify-start;
     }
 
     .skillbox-hidden {
@@ -15,7 +15,7 @@
     }
 
     .skill-tab{
-        @apply flex flex-wrap items-center justify-center w-64 h-32 bg-dark min-w-min py-6 m-2;
+        @apply flex flex-wrap items-center justify-center w-64 h-32 bg-darklight min-w-min py-6 m-2;
     }
 
     .category-toggled{

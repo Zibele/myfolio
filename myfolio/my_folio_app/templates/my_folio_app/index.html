@@ -154,7 +154,7 @@
 
         <div id = "skills" class="lg:w-2/3  w-1/3 h-96 pb-10">
 
-            <div id="Languages" class="skillbox-flex"> 
+            <div id="Languages" class="skillbox-flex "> 
 
                 {% for profile_skill in profile_skills %}
 
@@ -162,13 +162,13 @@
                         <div class="skill-tab">
                             
                             {% if profile_skill.skill.display_svg and profile_skill.skill.skill_svg %}
-
+                                <div>
                                 {{profile_skill.skill.skill_svg|safe}}
-                            
-                            {% else %}
-                                <h4>{{profile_skill.skill.skill_svg}}</h4>
-                                <h3>{{ profile_skill.skill.skill_name}}<h3> 
+                                </div>
+                            {% endif %}
 
+                            {% if profile_skill.skill.display_name %}
+                                <h1 class="ml-2 text-lg">{{ profile_skill.skill.skill_name}}</h1> 
                             {% endif %}
                         </div>
                     {% endif %}
@@ -176,23 +176,23 @@
 
             </div>
 
-            <div id="Frameworks" class="skillbox-flex hidden"> 
+            <div id="Frameworks" class="skillbox-hidden"> 
 
                 {% for profile_skill in profile_skills %}
 
                     {% if profile_skill.skill.category.category_name == "Framework" %}
                         <div class="skill-tab"> 
 
-
                             {% if profile_skill.skill.display_svg and profile_skill.skill.skill_svg %}
-
+                                <div>
                                 {{profile_skill.skill.skill_svg|safe}}
-                        
-                            {% else %}
-
-                                <h3>{{ profile_skill.skill.skill_name}}<h3> 
-
+                                </div>
                             {% endif %}
+
+                            {% if profile_skill.skill.display_name %}
+                                <h1 class="ml-2 text-lg">{{ profile_skill.skill.skill_name}}</h1> 
+                            {% endif %}
+                            
 
                         </div>
                     {% endif %}
@@ -201,7 +201,7 @@
 
             </div>
 
-            <div id="Tools" class="skillbox-flex hidden"> 
+            <div id="Tools" class="skillbox-hidden"> 
 
                 {% for profile_skill in profile_skills %}
 
@@ -210,13 +210,13 @@
                             
 
                             {% if profile_skill.skill.display_svg and profile_skill.skill.skill_svg %}
+                                <div>
+                                    {{profile_skill.skill.skill_svg|safe}}
+                                </div>
+                            {% endif %}
 
-                                {{profile_skill.skill.skill_svg|safe}}
-                        
-                            {% else %}
-
-                                <h3>{{ profile_skill.skill.skill_name}}<h3> 
-
+                            {% if profile_skill.skill.display_name %}
+                                <h1 class="ml-2 text-lg">{{ profile_skill.skill.skill_name}}</h1> 
                             {% endif %}
 
                         </div>
