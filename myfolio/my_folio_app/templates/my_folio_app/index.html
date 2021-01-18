@@ -121,7 +121,7 @@
 
     <section class='text-center text-gray-50'>
 
-    <article class ="flex flex-col items-center justify-between bg-darklight w-full">
+    <article class ="flex flex-col items-center justify-between bg-darklight w-full mb-10">
 
         <h1 class="text-4xl uppercase border-b-2 border-turq py-2 " > About </h1>
 
@@ -134,7 +134,7 @@
 
     <article class="flex flex-col items-center justify-between w-full pb-10">
 
-        <h1 class="text-4xl uppercase border-b-2 border-turq py-2 mb-2" > Skills </h1>
+        <h1 class="text-4xl uppercase border-b-2 border-turq py-2 mb-6" > Skills </h1>
             
         <div class="flex items-center justify-center py-2 w-full">
                 
@@ -144,6 +144,10 @@
 
             <button id = "skillBtn" value = "Frameworks" class="category-untoggled">
                 Frameworks
+            </button>
+
+            <button id = "skillBtn" value = "Databases" class="category-untoggled">
+                Databases
             </button>
 
             <button id = "skillBtn" value= "Tools" class="category-untoggled">
@@ -200,6 +204,33 @@
                 {% endfor %}
 
             </div>
+
+
+            <div id="Databases" class="skillbox-hidden"> 
+
+                {% for profile_skill in profile_skills %}
+
+                    {% if profile_skill.skill.category.category_name == "Database" %}
+                        <div class="skill-tab"> 
+
+                            {% if profile_skill.skill.display_svg and profile_skill.skill.skill_svg %}
+                                <div>
+                                {{profile_skill.skill.skill_svg|safe}}
+                                </div>
+                            {% endif %}
+
+                            {% if profile_skill.skill.display_name %}
+                                <h1 class="ml-2 text-lg">{{ profile_skill.skill.skill_name}}</h1> 
+                            {% endif %}
+                            
+
+                        </div>
+                    {% endif %}
+
+                {% endfor %}
+
+            </div>
+            
 
             <div id="Tools" class="skillbox-hidden"> 
 
