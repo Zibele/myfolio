@@ -41,7 +41,8 @@ class Skill(models.Model):
 
     category=models.ForeignKey(Category, on_delete=models.CASCADE)
     skill_name= models.CharField(max_length=30)
-    skill_svg=  models.TextField(null = True)
+    skill_svg_large= models.TextField(null = True)
+    skill_svg_small= models.TextField(null = True)
     display_svg= models.BooleanField(default = True)
     display_name = models.BooleanField(default = True)
     
@@ -61,8 +62,8 @@ class ProfileSkill(models.Model):
 
 class TechStack(models.Model):
 
-    project_id = models.ForeignKey(Project, on_delete=models.CASCADE)
-    skill_id = models.ForeignKey(Skill, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    skill = models.ForeignKey(Skill, on_delete=models.CASCADE)
 
     class meta:
         db_table='"TechStack"'
