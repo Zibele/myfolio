@@ -6,11 +6,11 @@
 
 @layer components {
 
-    .skillbox-flex {
-        @apply flex flex-wrap lg:flex-row items-center p-4 justify-start;
+    .skill-grid{
+        @apply grid grid-cols-2 gap-1 md:grid-cols-3 md:gap-2;
     }
 
-    .skillbox-hidden {
+    .skill-hidden {
         @apply hidden;
     }
 

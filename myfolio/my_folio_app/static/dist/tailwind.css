@@ -580,21 +580,20 @@ video {
   }
 }
 
-.skillbox-flex {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 1rem;
+.skill-grid{
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-@media (min-width: 1024px) {
-  .skillbox-flex {
-    flex-direction: row;
+@media (min-width: 768px) {
+  .skill-grid {
+    gap: 0.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-.skillbox-hidden {
+.skill-hidden {
   display: none;
 }
 

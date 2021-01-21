@@ -26,7 +26,7 @@ function toggleSkills(category){
     
     categories.forEach( (c) => {
 
-        c.id == category ? c.className ="skillbox-flex" : c.className = "skillbox-hidden";
+        c.id == category ? c.className ="skill-grid" : c.className = "skill-hidden";
      
     }); 
     

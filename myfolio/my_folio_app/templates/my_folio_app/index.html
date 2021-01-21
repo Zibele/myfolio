@@ -156,10 +156,10 @@
                 
         </div>
 
-        <div id = "skills" class="flex flex-col flex-grow-0 justify-items-center bg-white w-1/2 h-full pb-10">
+        <div id = "skills" class="flex justify-center items-center mx-auto h-full pb-10">
 
-            <div id="Languages" class="skillbox-flex "> 
-
+            <div id="Languages" class="skill-grid"> 
+                
                 {% for profile_skill in profile_skills %}
 
                     {% if profile_skill.skill.category.category_name == "Language" %}
@@ -180,7 +180,7 @@
 
             </div>
 
-            <div id="Frameworks" class="skillbox-hidden"> 
+            <div id="Frameworks" class="skill-hidden"> 
 
                 {% for profile_skill in profile_skills %}
 
@@ -206,12 +206,12 @@
             </div>
 
 
-            <div id="Databases" class="skillbox-hidden"> 
+            <div id="Databases" class="skill-hidden"> 
 
                 {% for profile_skill in profile_skills %}
 
                     {% if profile_skill.skill.category.category_name == "Database" %}
-                        <div class="skill-tab"> 
+                        <div class="skill-tab col-span-full"> 
 
                             {% if profile_skill.skill.display_svg and profile_skill.skill.skill_svg_large %}
                                 <div>
@@ -232,7 +232,7 @@
             </div>
             
 
-            <div id="Tools" class="skillbox-hidden"> 
+            <div id="Tools" class="skill-hidden"> 
 
                 {% for profile_skill in profile_skills %}
 
