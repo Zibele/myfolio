@@ -60,9 +60,9 @@
             <button class="bg-turq border-2 uppercase border-turq w-36 h-12 rounded-lg font-bold"> <a href="#" class="p-4" > Contact </a> </button>
             <button class="border-2 border-turq  w-36 h-12 ml-2 rounded-lg uppercase font-bold font-Poppins"> <a href="#" class="p-4"> Portfolio </a> </button>
         
-            </div> 
+        </div> 
 
-        </div>
+    </div>
 
         <div class = "bg-dark pt-14 lg:pt-0 text-gray-50">
         
@@ -257,39 +257,66 @@
 
     </section>
 
-    <section class="flex flex-col bg-darklight justify-start items-center w-full">
+    <section class="flex flex-col bg-dark justify-start items-center w-full">
 
-        <h1 class="my-10 text-4xl pb-2 border-b-2 border-turq text-gray-200 uppercase"> Portfolio </h1>
+        <h1 class="my-10 text-4xl pb-2 border-b-2 border-turq text-gray-200        uppercase">         
+            Portfolio 
+        </h1>
+        
+         
 
+         <article class="flex flex-col items-center w-2/3 p-4 mb-4 ">
+            
+             <div class ="flex flex-col items-start">
 
-        {% for project in projects %}
+                {% for project in projects %}
+                <div class ="my-5">
+                    <img src="static/img/app.PNG" width="225" height="225" class="mb-2 "> </img>
 
-         <article class="flex flex-col w-full">
-
-            <img src="static/img/app.PNG" width="225" height="225"> </img> 
-
-            <h1> {{ project.project_title }} </h1>
-
-            <div class="flex"> 
-                
-                {% for stack in tech_stacks %}
-
-                    {% if stack.project == project %}
-                        <p>We found it</p>
-                        {{stack.skill.skil_svg_small}}
+                    {% if project.logo_svg %}
+                        {{project.logo_svg|safe}}
                     {% endif %}
-                
-                {% endfor %}
 
+                    <h1 class="text-gray-200 text-2xl"> {{ project.project_title }} </h1>
+                    
+                    <p class="bg-darklight p-2 text-gray-200 my-4 rounded-sm">  {{ project.description }} </p>
+
+                     <div class="flex"> 
+                
+                        {% for stack in tech_stacks %}
+        
+                            {% if stack.project == project %}
+                                <h2 class="mr-1 text-l text-gray-200">
+                                   
+                                    {{stack.skill.skill_name}}
+                                                                                   
+                                </h2>
+                                
+                            {% endif %}
+                        
+                        {% endfor %}
+        
+                    </div>
+                </div>
+
+
+                <div class="flex text-gray-50 text-sm items-center justify-center lg:pb-6 lg:justify-between lg:w-1/2">
+
+                    <button class="bg-turq border-2 uppercase border-turq w-36 h-12 rounded-lg font-bold text-dark"> <a href="#" class="p-4" > Demo </a> </button>
+                    <button class="border-2 border-turq  w-36 h-12 ml-2 rounded-lg uppercase font-bold font-Poppins"> <a href="#" class="p-4"> Github </a> </button>
+                
+                </div> 
+
+
+
+                {% endfor %}
             </div>
 
-            <p>  {{ project.description }} </p>
             
 
-        </article> 
-       
-        {% endfor %}
-
+        </article>   
+        
+        
     </section>
 
   {% endblock %}

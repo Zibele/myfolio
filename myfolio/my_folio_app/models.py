@@ -17,6 +17,8 @@ class Project(models.Model):
 
     profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
     project_title = models.CharField(max_length=30)
+    project_svg = models.TextField(null=True)
+    logo_svg = models.TextField(null=True) 
     description = models.TextField()
     
     def __str__(self):
