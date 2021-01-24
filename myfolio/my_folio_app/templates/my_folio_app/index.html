@@ -259,7 +259,7 @@
 
     <section class="flex flex-col bg-dark justify-start items-center w-full">
 
-        <h1 class="my-10 text-4xl pb-2 border-b-2 border-turq text-gray-200        uppercase">         
+        <h1 class="my-10 text-4xl pb-2 border-b-2 border-turq text-gray-200 uppercase">         
             Portfolio 
         </h1>
         
@@ -267,48 +267,52 @@
 
          <article class="flex flex-col items-center w-2/3 p-4 mb-4 ">
             
-             <div class ="flex flex-col items-start">
+             
+            <div class ="flex flex-col items-start ">
+            
+            {% for project in projects %}
+               
+            <div class ="flex flex-col my-5 lg:flex-row lg:space-y-2">
 
-                {% for project in projects %}
-                <div class ="my-5">
-                    <img src="static/img/app.PNG" width="225" height="225" class="mb-2 "> </img>
-
-                    {% if project.logo_svg %}
-                        {{project.logo_svg|safe}}
-                    {% endif %}
-
-                    <h1 class="text-gray-200 text-2xl"> {{ project.project_title }} </h1>
+                    <img src="static/img/app.PNG" width="225" height="225" class="mb-2 lg:mr-10"> </img>
                     
-                    <p class="bg-darklight p-2 text-gray-200 my-4 rounded-sm">  {{ project.description }} </p>
+                    <div class="lg:space-y-4">
+                        {% if project.logo_svg %}
+                            {{project.logo_svg|safe}}
+                        {% endif %}
 
-                     <div class="flex"> 
+                        <h1 class="text-gray-200 text-2xl"> {{ project.project_title }} </h1>
+                    
+                        <p class="bg-darklight p-2 text-gray-200 my-4 rounded-md">  
+                            {{ project.description }} 
+                        </p>
+
+                        <div class="flex"> 
                 
-                        {% for stack in tech_stacks %}
+                            {% for stack in tech_stacks %}
         
-                            {% if stack.project == project %}
-                                <h2 class="mr-1 text-l text-gray-200">
-                                   
+                                {% if stack.project == project %}
+                                    <h2 class="mr-1 text-l text-gray-200">
                                     {{stack.skill.skill_name}}
                                                                                    
-                                </h2>
+                                    </h2>
                                 
-                            {% endif %}
+                                {% endif %}
                         
-                        {% endfor %}
+                            {% endfor %}
         
-                    </div>
+                        </div>
+               
+
+
+                        <div class="flex text-gray-50 text-sm items-start ">
+
+                            <button class="bg-turq border-2 uppercase border-turq w-36 h-12 rounded-lg font-bold text-dark"> <a href="#" class="p-4" > Demo </a> </button>
+                            <button class="border-2 border-turq  w-36 h-12 ml-2 rounded-lg uppercase font-bold font-Poppins"> <a href="#" class="p-4"> Github </a> </button>
+                        </div> 
+
                 </div>
-
-
-                <div class="flex text-gray-50 text-sm items-center justify-center lg:pb-6 lg:justify-between lg:w-1/2">
-
-                    <button class="bg-turq border-2 uppercase border-turq w-36 h-12 rounded-lg font-bold text-dark"> <a href="#" class="p-4" > Demo </a> </button>
-                    <button class="border-2 border-turq  w-36 h-12 ml-2 rounded-lg uppercase font-bold font-Poppins"> <a href="#" class="p-4"> Github </a> </button>
-                
-                </div> 
-
-
-
+            </div>
                 {% endfor %}
             </div>
 
@@ -316,7 +320,40 @@
 
         </article>   
         
+        <article class="flex flex-col items-center mb-10">
+
+            <h1 class="my-10 text-4xl pb-2 border-b-2 border-turq text-gray-200 uppercase">         
+                Lets Chat!
+            </h1>
+
+            <form class="flex flex-col items-center space-y-8">
+
+                <div class="flex flex-col space-y-8 w-full">
+
+                    <input type="text" placeholder="Name" class="w-full p-2"></input>
+                    <input type="text" placeholder="Email" class="w-full p-2"></input>
+
+                </div>
+
+                <textarea rows=10 cols=60> </textarea>
+
+                <input type="submit" class="p-2 w-1/2"> </input>
+
+            </form>
+
+        </article>
         
     </section>
+
+  {% endblock %}
+
+
+  {% block footer %}
+
+    
+    <footer class="w-full p-4 flex flex-row items-center justify-center text-gray-200 bg-darklight">
+        <p>Made by Zibele</p>
+    </footer>
+
 
   {% endblock %}
