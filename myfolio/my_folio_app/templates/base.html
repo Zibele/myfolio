@@ -12,21 +12,21 @@
         <script defer src="{% static 'dist/main.js' %}"> </script>
 
     </head>
-    <body class="antialiased bg-dark w-full h-full font-Poppins flex flex-col"> 
+    <body class="antialiased bg-dark w-full h-full font-Poppins flex flex-col items-center"> 
 
-        <div class="header">
+        <div class="header w-full">
 
             {% block header %}
             {% endblock %}
 
         </div>
 
-        <div class="content">
+        <div class="content w-full">
             {% block content %}
             {% endblock %}
         </div>
 
-        <div class="footer">
+        <div class="footer w-full">
              {% block footer %} {% endblock %}  
         </div>
     </body>
