@@ -25,6 +25,10 @@
     .category-untoggled{
         @apply w-36 h-12  uppercase font-bold mx-2 border-gray-100 text-gray-100 focus:text-turq hover:text-turq border-2 hover:border-turq focus:ring focus:outline-none focus:border-turq;
     }
+
+    #menu-toggle:checked + #menu {
+        @apply block;
+    }
 }
 
 
@@ -81,3 +85,4 @@
     font-weight:900;
     src: url('/static/fonts/Poppins/Poppins-Black.ttf') format('truetype');
 }
+
